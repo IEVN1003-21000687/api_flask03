@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+{% import "_macros.html" as macro %}
+
+<h1>Figuras basicas</h1>
+
+<form action="" method="post">
+
+  <label><input type="radio" name="figura" value="cuadrado" /> cuadrado</label>
+  
+  <label><input type="radio" name="figura" value="circulo" /> circulo</label>
+  
+  <label><input type="radio" name="figura" value="rectangulo" /> rectangulo</label>
+  
+  <label><input type="radio" name="figura" value="pentagono" /> pentagono</label>
+  
+
+  {{ macro.campoNuevo(form.valor1) }}
+  {{ macro.campoNuevo(form.valor2) }}
+
+  <button type="submit" class="btn btn-primary">Calcular</button>
+
+</form>
+
+{% if area %}
+
+<h2>Area: {{ area }}</h2>
+
+{% endif %}
+
+{% endblock %}
